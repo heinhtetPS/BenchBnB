@@ -20,7 +20,7 @@ const App = () => (
 
       <AuthRoute path="/login" component={ SessionFormContainer }  />
       <AuthRoute path="/signup" component={ SessionFormContainer }   />
-      <Route exact path="/"   component={ benchIndexContainer } />
+      <Route exact path="/"   component={ SearchContainer } />
   </div>
 );
 

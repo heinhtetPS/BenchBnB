@@ -1,12 +1,10 @@
 import { connect } from 'react-redux';
 import { fetchBenches } from '../actions/bench_actions';
-import BenchIndex from './bench_index.jsx';
-import { asArray } from '../reducers/selectors';
 import Search from './search';
+import { selectAllBenches } from '../reducers/selectors';
 
 const mapStateToProps = (state) => ({
-  //benches: selectAllBenches(state.benches)
-  benches: state.benches,
+  benches: selectAllBenches(state.benches),
   errors: state.errors,
 });
 

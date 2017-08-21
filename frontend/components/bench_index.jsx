@@ -10,8 +10,8 @@ class BenchIndex extends React.Component {
   }
 
   render() {
-    let benches = null;
-
+    // let benches = null;
+    debugger
     //Benches initializes as {}
     // in order to avoid rendering before we have data, we need to do this conditional
     // if (_.isEmpty(this.props.benches)) {
@@ -20,10 +20,11 @@ class BenchIndex extends React.Component {
 
     //Instead of messing with conditional, its better to convert to array as it is coming from the invisible world
     //Here it has already been converted by the selector, state is still obj
-      benches = this.props.benches.map(bench => {
+      const benches = this.props.benches.map(bench => {
         return (<BenchIndexItem key={bench.id} bench={bench}  />);
       });
     // }
+    debugger
     return (
       <ul>
         {benches}
