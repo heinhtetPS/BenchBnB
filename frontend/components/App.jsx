@@ -7,6 +7,7 @@ import { Route,
   HashRouter } from 'react-router-dom';
 import SessionFormContainer from './session_form_container';
 import { AuthRoute } from '../util/route_util';
+import benchIndexContainer from './bench_index_container';
 
 
 const App = () => (
@@ -16,8 +17,9 @@ const App = () => (
       <GreetingContainer />
     </header>
 
-      <AuthRoute component={SessionFormContainer} path="/login"  />
-      <AuthRoute component={SessionFormContainer} path="/signup"  />
+      <AuthRoute path="/login" component={ SessionFormContainer }  />
+      <AuthRoute path="/signup" component={ SessionFormContainer }   />
+      <Route exact path="/"   component={ benchIndexContainer } />
   </div>
 );
 
