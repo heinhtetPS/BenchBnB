@@ -14,7 +14,6 @@ class BenchIndexItem extends React.Component {
     // } else if (this.props.bench ) {
     //   bench = null;
     // }
-    debugger
     return (<li>Bench description:{description}</li>);
   }
 }

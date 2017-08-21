@@ -17,6 +17,9 @@ class BenchIndex extends React.Component {
     // if (_.isEmpty(this.props.benches)) {
     //   benches = null;
     // } else {
+
+    //Instead of messing with conditional, its better to convert to array as it is coming from the invisible world
+    //Here it has already been converted by the selector, state is still obj
       benches = this.props.benches.map(bench => {
         return (<BenchIndexItem key={bench.id} bench={bench}  />);
       });
