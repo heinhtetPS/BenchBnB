@@ -1,7 +1,12 @@
 import React from 'react';
 import GreetingContainer from './greeting_container';
-import { Route } from 'react-router-dom';
+import { Route,
+  Redirect,
+  Switch,
+  Link,
+  HashRouter } from 'react-router-dom';
 import SessionFormContainer from './session_form_container';
+import { AuthRoute } from '../util/route_util';
 
 
 const App = () => (
@@ -11,8 +16,8 @@ const App = () => (
       <GreetingContainer />
     </header>
 
-      <Route path="/login" component={SessionFormContainer} />
-      <Route path="/signup" component={SessionFormContainer} />
+      <AuthRoute component={SessionFormContainer} path="/login"  />
+      <AuthRoute component={SessionFormContainer} path="/signup"  />
   </div>
 );
 
