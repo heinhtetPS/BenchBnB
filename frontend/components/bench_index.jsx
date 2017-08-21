@@ -1,23 +1,29 @@
 import React from 'react';
 import BenchIndexItem from './bench_index_item';
+import { isEmpty } from 'lodash';
 
 
 class BenchIndex extends React.Component {
-  componentWillMount() {
+  componentDidMount() {
 
     this.props.fetchBenches();
-
   }
 
   render() {
-    debugger
-    const benches = this.props.benches[0];
-    // this.props.benches.map((bench, idx) => {
-    //   return <BenchIndexItem key={idx} bench={bench}  />;
-    // });
+    let benches = null;
+
+    //Benches initializes as {}
+    // in order to avoid rendering before we have data, we need to do this conditional
+    // if (_.isEmpty(this.props.benches)) {
+    //   benches = null;
+    // } else {
+      benches = this.props.benches.map(bench => {
+        return (<BenchIndexItem key={bench.id} bench={bench}  />);
+      });
+    // }
     return (
       <ul>
-        <BenchIndexItem bench={benches}  />
+        {benches}
       </ul>
 
     );

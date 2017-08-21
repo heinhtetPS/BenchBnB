@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import { fetchBenches } from '../actions/bench_actions';
 import BenchIndex from './bench_index.jsx';
-import { selectAllBenches } from '../reducers/selectors';
+import { asArray } from '../reducers/selectors';
+import Search from './search';
 
 const mapStateToProps = (state) => ({
-  benches: selectAllBenches(state.benches),
+  //benches: selectAllBenches(state.benches)
+  benches: state.benches,
   errors: state.errors,
 });
 
@@ -14,7 +16,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(BenchIndex);
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(Search);

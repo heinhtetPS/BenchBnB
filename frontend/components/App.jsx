@@ -8,6 +8,7 @@ import { Route,
 import SessionFormContainer from './session_form_container';
 import { AuthRoute } from '../util/route_util';
 import benchIndexContainer from './bench_index_container';
+import SearchContainer from './search_container';
 
 
 const App = () => (

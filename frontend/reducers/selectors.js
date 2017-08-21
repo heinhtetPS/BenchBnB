@@ -1,5 +1,3 @@
+import { values } from 'lodash';
 
-export const asArray = ({ benches }) => {
-  debugger
-  return Object.keys(benches).map(key => benches[key])
-};
+export const selectAllBenches = benches => values(benches);

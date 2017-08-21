@@ -8,3 +8,4 @@
 
 Bench.create(description:"Don't be a creeper", lat:37.747745, lng:-122.438512)
 Bench.create(description:"Another coast, another Sunset...", lat:37.751886, lng:-122.485676)
+Bench.create(description:"This one is completely random", lat:Math.floor(Math.random() * 38) + 32, lng:Math.floor(Math.random() * -123) + 121)
